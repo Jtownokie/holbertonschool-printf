@@ -23,7 +23,7 @@ int (*get_cs_func(char *s))(char *)
 int (*get_di_func(char *s))(int)
 {
 	param_di paramdi[] = {
-		{"d", print_digit},
+		{"d", print_int},
 		{"i", print_int},
 		{NULL, NULL}
 	};

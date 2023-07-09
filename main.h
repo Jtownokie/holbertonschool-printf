@@ -10,25 +10,25 @@ int _printf(const char *format, ...);
 typedef struct paramcs
 {
 	char *param;
-	void (*csfunc)(char *);
+	int (*csfunc)(char *);
 } param_cs;
 
 typedef struct paramdi
 {
 	char *param;
-	void (*difunc)(int);
+	int (*difunc)(int);
 } param_di;
 
-void print_digit(int);
+int print_int(int);
 
-void print_int(int);
+int print_char(char *);
 
-void print_char(char *);
-
-void print_str(char *);
+int print_str(char *);
 
 int (*get_cs_func(char *s))(char *);
 
 int (*get_di_func(char *s))(int);
+
+int _putchar (char c);
 
 #endif
