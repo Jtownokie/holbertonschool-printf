@@ -1,15 +1,39 @@
-void print_char(char *ch)
+int print_char(char *ch)
 {
+	while(*ch != NULL)
+	{
+		_putchar(*ch);
+	}
+	return (1);
 }
 
-void print_str(char *str)
+int print_str(char *str)
 {
+	int i = 0
+	while(*str != NULL)
+	{	
+		_putchar(*str);
+		i++
+	}
+	return (i);
 }
 
-void print_digit(int n)
-{
-}
+int print_int(int n)
+{ 
+	int i, j;
+	char buf[10];
 
-void print_int(int n)
-{
+	i = 0;
+	j = 0;
+	do {
+		buf[i++] = n % 10 + '0';
+		n /= 10;
+	} while (n > 0);
+	
+	for (; i >= 0; i--) 
+	{
+		_putchar(buf[i]);
+		j++;
+	}
+	return (j);
 }
