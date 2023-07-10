@@ -21,6 +21,6 @@ int print_str(char *);
 
 int (*get_func(char *s))();
 
-int _putchar (char c);
+int _putchar(char c);
 
 #endif
