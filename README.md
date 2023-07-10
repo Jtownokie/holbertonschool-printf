@@ -23,6 +23,14 @@ int age = 27;
 _printf("My name is %s, I am %d years old.", name, age);
 ```
 
+## Description
+
+The \_printf function uses the following methodology:
+
+A format string is passed to the function, followed by a variadic number of variables passed as arguments. The function then iterates through the format string, using putchar to write each character to output. If a % is encountered, the iterative variable is increased by one to check if the next character is a 'd', 'i', 'c', 's', or '%'. If a letter is encountered, the function calls get\_func, which returns a pointer to a print function that prints the value of the variadic variables passed as arguments. If a second % is encountered, the function writes a % to output. Finally, the function returns the final count of characters printed by the function.
+
+Flow Chart:
+
 ## Contributing
 
 This is a project created by Chris Stephens and Amir Colbert at Holberton School.
