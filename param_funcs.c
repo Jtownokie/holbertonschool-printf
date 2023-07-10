@@ -1,9 +1,6 @@
-int print_char(char *ch)
+int print_char(char c)
 {
-	while(*ch != NULL)
-	{
-		_putchar(*ch);
-	}
+	_putchar(c);
 	return (1);
 }
 
@@ -26,7 +23,7 @@ int print_int(int n)
 	i = 0;
 	j = 0;
 	do {
-		buf[i++] = n % 10 + '0';
+		buf[i++] = (n % 10) + '0';
 		n /= 10;
 	} while (n > 0);
 	

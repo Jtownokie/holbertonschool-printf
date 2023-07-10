@@ -7,27 +7,19 @@
 
 int _printf(const char *format, ...);
 
-typedef struct paramcs
+typedef struct param
 {
 	char *param;
-	int (*csfunc)(char *);
-} param_cs;
-
-typedef struct paramdi
-{
-	char *param;
-	int (*difunc)(int);
-} param_di;
+	int (*func)();
+} param_t;
 
 int print_int(int);
 
-int print_char(char *);
+int print_char(char);
 
 int print_str(char *);
 
-int (*get_cs_func(char *s))(char *);
-
-int (*get_di_func(char *s))(int);
+int (*get_func(char *s))();
 
 int _putchar (char c);
 
