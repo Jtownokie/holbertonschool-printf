@@ -26,9 +26,12 @@ int _printf(const char *format, ...)
 				i++;
 				ch_count++;
 			}
-			printptr = get_func(&format[i]);
-			ch_count += printptr(varg);
-			i++;
+			else
+			{
+				printptr = get_func(&format[i]);
+				ch_count += printptr(varg);
+				i++;
+			}
 		}
 		if (format[i] == '\n')
 		{
