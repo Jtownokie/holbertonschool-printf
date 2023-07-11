@@ -57,5 +57,6 @@ int print_int(va_list n)
 		_putchar(buf[i]);
 		j++;
 	}
+	_putchar('\0');
 	return (j);
 }

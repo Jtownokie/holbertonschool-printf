@@ -19,14 +19,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
+			i++;
+			if (format[i] == '%')
 			{
 				_putchar('%');
-				i += 2;
+				i += 1;
 			}
-			printptr = get_func(&format[i + 1]);
+			printptr = get_func(&format[i]);
 			ch_count += printptr(varg);
-			i += 2;
+			i += 1;
 		}
 		else
 		{
