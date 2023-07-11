@@ -19,19 +19,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			if (format[i] == '%')
+			if (format[i + 1] == '%')
 			{
 				_putchar('%');
-				i++;
-				ch_count++;
+				i += 2;
 			}
-			else
-			{
 				printptr = get_func(&format[i]);
 				ch_count += printptr(varg);
-				i++;
-			}
+				i += 2;
 		}
 		if (format[i] == '\n')
 		{
@@ -46,7 +41,7 @@ int _printf(const char *format, ...)
 			ch_count++;
 		}
 	}
-	return (ch_count);
-
 	va_end(varg);
+
+	return (ch_count);
 }
