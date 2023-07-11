@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * *get_func - Function that checks a char against a function
+ * @s: char to check
+ *
+ * Return: Pointer to correct print function
+ */
 int (*get_func(const char *s))(va_list)
 {
 	param_t param[] = {
