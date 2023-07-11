@@ -7,6 +7,13 @@
 
 int _printf(const char *format, ...);
 
+/**
+ * struct param - Struct that stores a char and a function pointer
+ * @param: Character to match
+ * @func: Function pointer to print function
+ *
+ * Description: This struct stores a character and a function pointer
+ */
 typedef struct param
 {
 	char *param;
