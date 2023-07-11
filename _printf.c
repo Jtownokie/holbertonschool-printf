@@ -25,9 +25,15 @@ int _printf(const char *format, ...)
 			}
 			if (format[i + 1] == 'c')
 			{
+				 printptr = get_func(format[i + 1]);
+				   ch_count += printptr(va_arg(varg, int));
+				     i += 2;
 			}
 			if (format[i + 1] == 's')
 			{
+				 printptr = get_func(format[i + 1]);
+				   ch_count += printptr(va_arg(varg, char *));
+				     i += 2;
 			}
 			if (format[i + 1] == '%')
 			{
