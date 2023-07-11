@@ -17,16 +17,17 @@ int _printf(const char *format, ...);
 typedef struct param
 {
 	char *param;
-	int (*func)();
+	int (*func)(va_list);
 } param_t;
 
-int print_int(int);
 
-int print_char(char);
+int print_int(va_list n);
 
-int print_str(char *);
+int print_char(va_list c);
 
-int (*get_func(char *s))();
+int print_str(va_list str);
+
+int (*get_func(const char *s))(va_list);
 
 int _putchar(char c);
 

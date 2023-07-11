@@ -1,4 +1,6 @@
-int (*get_func(char *s))()
+#include "main.h"
+
+int (*get_func(const char *s))(va_list)
 {
 	param_t param[] = {
 		{"c", print_char},
