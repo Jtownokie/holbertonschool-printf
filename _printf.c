@@ -23,11 +23,18 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 			{
 				_putchar('%');
-				i += 1;
+				i++;
+				ch_count++;
 			}
 			printptr = get_func(&format[i]);
 			ch_count += printptr(varg);
-			i += 1;
+			i++;
+		}
+		if (format[i] == '\n')
+		{
+			_putchar('\n');
+			i++;
+			ch_count++;
 		}
 		else
 		{
