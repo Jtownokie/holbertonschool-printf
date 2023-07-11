@@ -28,12 +28,6 @@ int _printf(const char *format, ...)
 				ch_count += printptr(varg);
 				i += 2;
 		}
-		if (format[i] == '\n')
-		{
-			_putchar('\n');
-			i++;
-			ch_count++;
-		}
 		else
 		{
 			_putchar(format[i]);
