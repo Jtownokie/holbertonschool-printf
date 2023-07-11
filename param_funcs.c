@@ -24,9 +24,9 @@ int print_str(va_list vastr)
 	char *str = va_arg(vastr, char *);
 	int i = 0;
 
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
-		_putchar(*str);
+		_putchar(str[i]);
 		i++;
 	}
 	return (i);
@@ -47,8 +47,9 @@ int print_int(va_list n)
 	i = 0;
 	j = 0;
 	do {
-		buf[i++] = (num % 10) + '0';
+		buf[i] = (num % 10) + '0';
 		num /= 10;
+		i++;
 	} while (num > 0);
 
 	for (; i >= 0; i--)
