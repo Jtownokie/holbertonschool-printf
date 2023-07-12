@@ -57,11 +57,11 @@ int print_int(va_list n)
 		i++;
 	} while (num > 0);
 
-	for (; i >= 0; i--)
+	for (i -= 1; i >= 0; i--)
 	{
 		_putchar(buf[i]);
 		j++;
 	}
 
-	return (j - 1);
+	return (j);
 }
