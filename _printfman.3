@@ -1,4 +1,4 @@
-.TH _printF 07-11-2023
+.TH _printf 07-11-2023
 
 .SH NAME
 _printf \- a function used to format and print data
@@ -6,7 +6,6 @@ _printf \- a function used to format and print data
 .SH SYNOPSIS
 
 .B _printf
-
 .RI [ format ]
 .RI [ arguements ]
 
@@ -16,7 +15,6 @@ _printf \- a function used to format and print data
 This function prints formatted text to the standard output. The format string specifies the format of the text to be printed. The arguments are the values to to be printed.
 .SH FORMAT
 The format string is a sequence of characters that can be interpreted by _printf. The following are the special characters that can be used in the format string:
-
 .TP
 .B %d
 This prints an integer.
@@ -39,6 +37,7 @@ The arguements are the values to be printed. The type of each arguement must mat
 _printf will return the number of characters printed.
 .SH EXAMPLE
 The following code is an example of how to use _printf:
+
 int main() 
 {
 int i = 5;
@@ -49,6 +48,7 @@ if (result == -1)
 {
 printf("Error printing text.\n");
 }
+
 
 return 0;
 }
