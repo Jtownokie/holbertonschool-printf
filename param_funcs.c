@@ -47,10 +47,17 @@ int print_int(va_list n)
 {
 	int i, j;
 	int num = va_arg(n, int);
-	char buf[10];
+	char buf[11];
 
 	i = 0;
 	j = 0;
+
+	if (num < 0)
+	{
+		buf[i] = '-';
+		i++;
+	}
+
 	do {
 		buf[i] = (num % 10) + '0';
 		num /= 10;
