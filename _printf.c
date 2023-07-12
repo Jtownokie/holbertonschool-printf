@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				i += 2;
 			}
-				printptr = get_func(&format[i]);
+				printptr = get_func(&format[i + 1]);
 				ch_count += printptr(varg);
 				i += 2;
 		}
