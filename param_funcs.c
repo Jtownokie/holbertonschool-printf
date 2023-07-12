@@ -50,7 +50,7 @@ int print_int(va_list n)
 	char buf[10];
 
 	i = 0;
-	j = 1;
+	j = 0;
 	do {
 		buf[i] = (num % 10) + '0';
 		num /= 10;
@@ -63,5 +63,5 @@ int print_int(va_list n)
 		j++;
 	}
 
-	return (j);
+	return (j - 1);
 }
