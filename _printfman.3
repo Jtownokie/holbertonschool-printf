@@ -1,0 +1,62 @@
+.TH _printF 07-11-2023
+
+.SH NAME
+_printf \- a function used to format and print data
+
+.SH SYNOPSIS
+
+.B _printf
+
+.RI [ format ]
+.RI [ arguements ]
+
+.SH DESCRIPTION
+
+.B _printf
+This function prints formatted text to the standard output. The format string specifies the format of the text to be printed. The arguments are the values to to be printed.
+.SH FORMAT
+The format string is a sequence of characters that can be interpreted by _printf. The following are the special characters that can be used in the format string:
+
+.TP
+.B %d
+This prints an integer.
+
+.TP
+.B %c
+This prints a character.
+
+.TP
+.B %s
+This prints a string.
+
+.TP
+.B %%
+This prints a percent sign.
+
+.SH ARGUEMENTS
+The arguements are the values to be printed. The type of each arguement must match and correspondto the format specifier in the format string.
+.SH RETURN VALUE
+_printf will return the number of characters printed.
+.SH EXAMPLE
+The following code is an example of how to use _printf:
+int main() 
+{
+int i = 5;
+char *str = "Hello!";
+
+int result = _printf("This is a %d-character string: %s\n", i, str);
+if (result == -1) 
+{
+printf("Error printing text.\n");
+}
+
+return 0;
+}
+
+This code will print the following to standard output:
+
+This is a 5-character string: Hello!
+
+.SH AUTHOR
+
+Amir Colbert 
