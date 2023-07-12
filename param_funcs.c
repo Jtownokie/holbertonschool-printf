@@ -24,6 +24,11 @@ int print_str(va_list vastr)
 	char *str = va_arg(vastr, char *);
 	int i = 0;
 
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
