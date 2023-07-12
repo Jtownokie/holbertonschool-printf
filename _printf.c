@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '%')
 			{
 				_putchar('%');
+				ch_count++;
 				i += 2;
 			}
 			else
