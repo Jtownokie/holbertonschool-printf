@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 	int (*printptr)(va_list);
 
 	va_start(varg, format);
+	if (format == NULL)
+		return (-1);
 
 	while (format[i] != '\0')
 	{
@@ -46,6 +48,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(varg);
-
 	return (ch_count);
 }
